@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /*val retrofit = Retrofit.getInstance()
-        dadosService = retrofit.create(DadosService::class.java)*/
+        val retrofit = Retrofit.getInstance()
+        dadosService = retrofit.create(DadosService::class.java)
 
         btnConsultar.setOnClickListener {
             consult(editNumCard.text.toString())
@@ -35,9 +35,8 @@ class MainActivity : AppCompatActivity() {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe { result: String ->
-                Toast.makeText(this@MainActivity, "Logado", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, ConsultaActivity::class.java)
-                startActivity(intent)
+                textResult.setText("$result")
+
             }
 
         )

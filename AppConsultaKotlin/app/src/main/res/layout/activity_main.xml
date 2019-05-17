@@ -13,13 +13,24 @@
             android:ems="10"
             android:id="@+id/editNumCard"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="143dp" app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_marginTop="143dp" app:layout_constraintEnd_toEndOf="parent"
+            android:hint="Digite o codigo do cartão" android:layout_marginBottom="171dp"
+            app:layout_constraintBottom_toTopOf="@+id/textResult"/>
     <Button
-            android:text="Button"
+            android:text="Consultar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnConsultar"
             app:layout_constraintStart_toStartOf="@+id/editNumCard" android:layout_marginTop="75dp"
             android:layout_marginLeft="50dp" android:layout_marginStart="50dp"
             app:layout_constraintTop_toBottomOf="@+id/editNumCard"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/textResult"
+            app:layout_constraintTop_toBottomOf="@+id/editNumCard" android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="35dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="35dp" android:layout_marginEnd="35dp" android:layout_marginRight="35dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
 </android.support.constraint.ConstraintLayout>
